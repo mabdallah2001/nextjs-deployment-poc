@@ -4,22 +4,23 @@ import { NextResponse, NextRequest } from "next/server";
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const method = request.method;
-  switch (method) {
-    case 'GET':
-      // Return the current data
-      // return NextResponse.redirect(new URL("/about", request.url));
 
-    case 'POST':
+  switch (method) {
+    case "GET":
+    // Return the current data
+    // return NextResponse.redirect(new URL("/about", request.url));
+
+    case "POST":
       // Add new entry
       // Extract data from request body and add to dataStore
       return NextResponse.redirect(new URL("/about", request.url));
 
       break;
-    case 'PUT':
+    case "PUT":
       // Update existing entry
       // Extract data from request body and update dataStore
       break;
-    case 'DELETE':
+    case "DELETE":
       // Delete entry
       // Extract identifier from request and remove from dataStore
       break;
