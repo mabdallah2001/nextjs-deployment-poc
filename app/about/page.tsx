@@ -20,7 +20,8 @@ export default async function Page() {
   const data = await getData();
 
   return (
-    <main>
+    <main className="flex flex-col justify-between p-24">
+      <h1>Static content, pulled from an API:</h1>
       <p>Amount of data: {data.count}</p>
 
       <>
