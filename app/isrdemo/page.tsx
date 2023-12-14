@@ -6,7 +6,7 @@ const REVALIDATE_VALUE =
   process.env.NEXT_PUBLIC_ISR_DEMO_REVALIDATE_DURATION || "0";
 
 async function getData() {
-  const res = await fetch(`https://${process.env.VERCEL_URL}/isrdemo/api`, {
+  const res = await fetch(`${process.env.VERCEL_URL}/isrdemo/api`, {
     next: { revalidate: Number(REVALIDATE_VALUE) },
   });
 
